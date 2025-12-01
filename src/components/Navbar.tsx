@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from '@/hooks/useTheme';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,19 +34,30 @@ const Navbar = () => {
               <p className="text-xs text-muted-foreground">Rekayasa Perangkat Lunak</p>
             </div>
           </div>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-6">
             <a
               href="#siswa"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              className="nav-link text-sm font-medium text-foreground transition-colors relative"
             >
               Siswa
             </a>
             <a
               href="#guru"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              className="nav-link text-sm font-medium text-foreground transition-colors relative"
             >
               Guru
             </a>
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-300 hover:scale-110"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? (
+                <Moon className="w-5 h-5 text-foreground transition-transform duration-300" />
+              ) : (
+                <Sun className="w-5 h-5 text-foreground transition-transform duration-300" />
+              )}
+            </button>
           </div>
         </div>
       </div>

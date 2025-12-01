@@ -179,4 +179,29 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: hsl(var(--primary));
+    transition: width 0.3s ease-out;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 }
