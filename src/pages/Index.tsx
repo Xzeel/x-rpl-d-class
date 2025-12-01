@@ -2,6 +2,8 @@ import Navbar from '@/components/Navbar';
 import StudentCard from '@/components/StudentCard';
 import TeacherCard from '@/components/TeacherCard';
 import Footer from '@/components/Footer';
+import Gallery from '@/components/Gallery';
+import AnimatedBackground from '@/components/AnimatedBackground';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import teacherImg from '@/assets/teacher.jpg';
 import student1Img from '@/assets/student1.jpg';
@@ -81,6 +83,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <AnimatedBackground />
       <Navbar />
 
       {/* Hero Section */}
@@ -141,6 +144,21 @@ const Index = () => {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section id="galeri" className="py-20 px-4 bg-accent/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              Galeri Kegiatan
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Momen-momen berharga kegiatan kelas X RPL D
+            </p>
+          </div>
+          <Gallery />
         </div>
       </section>
 

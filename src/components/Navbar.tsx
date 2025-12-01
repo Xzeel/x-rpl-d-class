@@ -47,6 +47,12 @@ const Navbar = () => {
             >
               Guru
             </a>
+            <a
+              href="#galeri"
+              className="nav-link text-sm font-medium text-foreground transition-colors relative"
+            >
+              Galeri
+            </a>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-300 hover:scale-110"
