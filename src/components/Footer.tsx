@@ -38,10 +38,16 @@ const Footer = () => {
 
           <div className="text-center space-y-2">
             <p className="text-sm text-secondary-foreground/80">
-              © {currentYear} X RPL D. All rights reserved.
-            </p>
-            <p className="text-xs text-secondary-foreground/60">
-              Developed with ❤️ by X RPL D Team
+              © {currentYear}{' '}
+              <a
+                href="https://lumistra-unity.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold hover:text-primary transition-colors underline decoration-primary/50 hover:decoration-primary"
+              >
+                Lumistra Unity
+              </a>
+              . All rights reserved.
             </p>
           </div>
         </div>
