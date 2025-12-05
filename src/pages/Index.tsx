@@ -74,7 +74,7 @@ const Index = () => {
   ];
 
   const teacher = {
-    name: 'Bapak Hendra Wijaya, S.Kom',
+    name: 'Danang Dwi Gusti Fajar Yanto, S.Kom',
     jabatan: 'Guru Mata Pelajaran RPL',
     motivasi:
       'Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia',
