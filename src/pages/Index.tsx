@@ -55,7 +55,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-foreground">
-                Kelas X RPL D - SMK Negeri
+                X RPL D - SMKN 8 Malang
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Kami adalah kelas X RPL D, sebuah komunitas pembelajar yang bersemangat dalam dunia 
