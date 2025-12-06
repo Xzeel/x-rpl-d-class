@@ -30,7 +30,7 @@ const Navbar = () => {
             <img src={logoImg} alt="X RPL D Logo" className="w-12 h-12 rounded-lg object-cover" />
             <div>
               <h1 className="text-lg font-bold text-foreground">X RPL D</h1>
-              <p className="text-xs text-muted-foreground">SMKN 8 Malang</p>
+              <p className="text-xs text-muted-foreground">SMK Negeri 8 Malang</p>
             </div>
           </div>
           <div className="flex items-center gap-6">
