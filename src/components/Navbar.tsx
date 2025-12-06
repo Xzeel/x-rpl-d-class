@@ -17,14 +17,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-background/80 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-4 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 py-4 px-4">
+      <div
+        className={`max-w-4xl mx-auto px-6 py-3 rounded-2xl transition-all duration-300 ${
+          scrolled
+            ? 'bg-background/80 backdrop-blur-md shadow-lg border border-border/50'
+            : 'bg-background/40 backdrop-blur-sm'
+        }`}
+      >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img src={logoImg} alt="X RPL D Logo" className="w-12 h-12 rounded-lg object-cover" />
