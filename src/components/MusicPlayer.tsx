@@ -8,7 +8,7 @@ const MusicPlayer = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 0.3;
+      audio.volume = 0.8;
       if (isPlaying) {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
