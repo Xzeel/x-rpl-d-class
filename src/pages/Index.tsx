@@ -39,7 +39,7 @@ const Index = () => {
             <ShineText>Rekayasa Perangkat Lunak</ShineText>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in h-8">
-            <TypingAnimation text="Membangun masa depan digital dengan kreativitas dan inovasi" />
+            <TypingAnimation text="Selamat datang di website kelas X RPL D!" />
           </p>
         </div>
       </section>
