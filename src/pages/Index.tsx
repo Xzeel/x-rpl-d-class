@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import MusicPlayer from '@/components/MusicPlayer';
+import ShineText from '@/components/ShineText';
+import TypingAnimation from '@/components/TypingAnimation';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import teacherImg from '@/assets/teacher.jpg';
 
@@ -31,10 +33,10 @@ const Index = () => {
             Kelas X RPL D
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-foreground animate-fade-in">
-            Rekayasa Perangkat Lunak
+            <ShineText>Rekayasa Perangkat Lunak</ShineText>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
-            Membangun masa depan digital dengan kreativitas dan inovasi
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in h-8">
+            <TypingAnimation text="Membangun masa depan digital dengan kreativitas dan inovasi" />
           </p>
         </div>
       </section>
