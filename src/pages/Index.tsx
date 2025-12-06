@@ -69,11 +69,11 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="text-center p-4 rounded-xl bg-primary/10">
-                  <div className="text-3xl font-bold text-primary">36</div>
+                  <div className="text-3xl font-bold text-primary">34</div>
                   <div className="text-sm text-muted-foreground">Siswa</div>
                 </div>
-                <div className="text-center p-4 rounded-xl bg-secondary">
-                  <div className="text-3xl font-bold text-primary">2024</div>
+                <div className="text-center p-4 rounded-xl bg-primary/10">
+                  <div className="text-3xl font-bold text-primary">2025</div>
                   <div className="text-sm text-muted-foreground">Angkatan</div>
                 </div>
               </div>
