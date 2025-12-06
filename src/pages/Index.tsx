@@ -52,7 +52,7 @@ const Index = () => {
               About Us
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Mengenal lebih dekat kelas X RPL D
+              Ngintip lebih deket tentang vibes dan karakter seru dari kelas X RPL D
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
