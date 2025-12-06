@@ -111,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* Teacher Section */}
-      <section id="guru" className="py-20 px-4 bg-accent/30">
+      <section id="teacher" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
@@ -131,7 +131,7 @@ const Index = () => {
       </section>
 
       {/* Gallery Section */}
-      <section id="galeri" className="py-20 px-4">
+      <section id="gallery" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
