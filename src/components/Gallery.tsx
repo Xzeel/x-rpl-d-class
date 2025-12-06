@@ -11,12 +11,12 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryImages = [
-    { src: gallery1Img, alt: 'Siswa sedang belajar coding bersama' },
-    { src: gallery2Img, alt: 'Kompetisi programming' },
-    { src: gallery3Img, alt: 'Suasana kelas yang menyenangkan' },
-    { src: gallery4Img, alt: 'Lab programming modern' },
-    { src: gallery5Img, alt: 'Merayakan keberhasilan project' },
-    { src: gallery6Img, alt: 'Workshop teknologi' },
+    { src: gallery1Img, alt: 'Fotbar bareng guru PPL Agama Islam' },
+    { src: gallery2Img, alt: 'Fotbar hari Guru 2025 bareng pak Danang' },
+    { src: gallery3Img, alt: 'Fotbar latihan tampil PPTA 2025' },
+    { src: gallery4Img, alt: 'Fotbar bareng guru PPL Informatika' },
+    { src: gallery5Img, alt: 'Fotbar bareng guru PPL DPGIM' },
+    { src: gallery6Img, alt: 'Fotbar bareng guru PPL DPGIM' },
   ];
 
   return (
