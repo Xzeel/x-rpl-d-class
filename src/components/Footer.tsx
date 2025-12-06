@@ -47,8 +47,8 @@ const Footer = () => {
           <div className="text-center space-y-2">
             <p className="text-sm text-secondary-foreground/80">
               © {currentYear}{' '}
-              <a target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary transition-colors underline decoration-primary/50 hover:decoration-primary" href="https://lumistra-unity.carrd.co/">
-                Lumistra Unity
+              <a target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary transition-colors underline decoration-primary/50 hover:decoration-primary" href="https://xzeelarcadia.carrd.co/">
+                XzeelArcadia
               </a>
               . All Rights Reserved.
             </p>
