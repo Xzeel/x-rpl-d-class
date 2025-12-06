@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const socialLinks = [{
     icon: Instagram,
-    href: 'https://www.instagram.com/xzeelarcadia.id',
+    href: 'https://www.instagram.com/astarplderise_',
     label: 'Instagram'
   }, {
     icon: Twitter,
