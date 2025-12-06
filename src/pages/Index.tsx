@@ -4,6 +4,7 @@ import TeacherCard from '@/components/TeacherCard';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import AnimatedBackground from '@/components/AnimatedBackground';
+import MusicPlayer from '@/components/MusicPlayer';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import teacherImg from '@/assets/teacher.jpg';
 import student1Img from '@/assets/student1.jpg';
@@ -84,6 +85,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <AnimatedBackground />
+      <MusicPlayer />
       <Navbar />
 
       {/* Hero Section */}
