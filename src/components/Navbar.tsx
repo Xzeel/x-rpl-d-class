@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
+import logoImg from '@/assets/logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,9 +27,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">X</span>
-            </div>
+            <img src={logoImg} alt="X RPL D Logo" className="w-12 h-12 rounded-lg object-cover" />
             <div>
               <h1 className="text-lg font-bold text-foreground">X RPL D</h1>
               <p className="text-xs text-muted-foreground">Rekayasa Perangkat Lunak</p>
@@ -36,10 +35,10 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-6">
             <a
-              href="#siswa"
+              href="#about"
               className="nav-link text-sm font-medium text-foreground transition-colors relative"
             >
-              Siswa
+              About
             </a>
             <a
               href="#guru"

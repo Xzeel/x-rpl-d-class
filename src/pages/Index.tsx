@@ -1,5 +1,4 @@
 import Navbar from '@/components/Navbar';
-import StudentCard from '@/components/StudentCard';
 import TeacherCard from '@/components/TeacherCard';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
@@ -7,72 +6,9 @@ import AnimatedBackground from '@/components/AnimatedBackground';
 import MusicPlayer from '@/components/MusicPlayer';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import teacherImg from '@/assets/teacher.jpg';
-import student1Img from '@/assets/student1.jpg';
-import student2Img from '@/assets/student2.jpg';
-import student3Img from '@/assets/student3.jpg';
-import student4Img from '@/assets/student4.jpg';
 
 const Index = () => {
   useSmoothScroll();
-
-  const students = [
-    {
-      name: 'Ahmad Rizki Pratama',
-      kelas: 'X RPL D',
-      noAbsen: 1,
-      motivasi: 'Coding is not just about writing code, it\'s about solving problems',
-      image: student1Img,
-    },
-    {
-      name: 'Siti Nurhaliza',
-      kelas: 'X RPL D',
-      noAbsen: 2,
-      motivasi: 'Technology is best when it brings people together',
-      image: student2Img,
-    },
-    {
-      name: 'Budi Santoso',
-      kelas: 'X RPL D',
-      noAbsen: 3,
-      motivasi: 'The only way to do great work is to love what you do',
-      image: student3Img,
-    },
-    {
-      name: 'Dewi Anggraini',
-      kelas: 'X RPL D',
-      noAbsen: 4,
-      motivasi: 'Innovation distinguishes between a leader and a follower',
-      image: student4Img,
-    },
-    {
-      name: 'Fikri Ramadhan',
-      kelas: 'X RPL D',
-      noAbsen: 5,
-      motivasi: 'Learn from yesterday, live for today, hope for tomorrow',
-      image: student1Img,
-    },
-    {
-      name: 'Anisa Putri',
-      kelas: 'X RPL D',
-      noAbsen: 6,
-      motivasi: 'Success is not final, failure is not fatal',
-      image: student2Img,
-    },
-    {
-      name: 'Dimas Prasetyo',
-      kelas: 'X RPL D',
-      noAbsen: 7,
-      motivasi: 'The future belongs to those who believe in their dreams',
-      image: student3Img,
-    },
-    {
-      name: 'Maya Wijaya',
-      kelas: 'X RPL D',
-      noAbsen: 8,
-      motivasi: 'Dream big, work hard, stay focused',
-      image: student4Img,
-    },
-  ];
 
   const teacher = {
     name: 'Danang Dwi Gusti Fajar Yanto, S.Kom',
@@ -103,6 +39,72 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              About Us
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Mengenal lebih dekat kelas X RPL D
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">
+                Kelas X RPL D - SMK Negeri
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Kami adalah kelas X RPL D, sebuah komunitas pembelajar yang bersemangat dalam dunia 
+                Rekayasa Perangkat Lunak. Dengan dedikasi tinggi dan semangat kolaborasi, kami 
+                berkomitmen untuk menjadi developer handal masa depan Indonesia.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Di kelas ini, kami mempelajari berbagai teknologi pemrograman, pengembangan web, 
+                mobile, dan database. Dengan bimbingan guru-guru terbaik, kami terus mengasah 
+                kemampuan untuk menghadapi tantangan industri teknologi.
+              </p>
+              <div className="grid grid-cols-2 gap-6 pt-4">
+                <div className="text-center p-4 rounded-xl bg-primary/10">
+                  <div className="text-3xl font-bold text-primary">36</div>
+                  <div className="text-sm text-muted-foreground">Siswa</div>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-secondary">
+                  <div className="text-3xl font-bold text-primary">2024</div>
+                  <div className="text-sm text-muted-foreground">Angkatan</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
+              <div className="relative bg-card rounded-3xl p-8 shadow-xl">
+                <h4 className="text-xl font-bold text-card-foreground mb-4">Visi Kami</h4>
+                <p className="text-muted-foreground mb-6">
+                  Menjadi kelas yang unggul dalam bidang teknologi informasi dan menghasilkan 
+                  lulusan yang kompeten, kreatif, dan berintegritas tinggi.
+                </p>
+                <h4 className="text-xl font-bold text-card-foreground mb-4">Misi Kami</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    Menguasai teknologi pemrograman modern
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    Membangun proyek-proyek inovatif
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    Berkolaborasi dan berbagi ilmu
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Teacher Section */}
       <section id="guru" className="py-20 px-4 bg-accent/30">
         <div className="container mx-auto">
@@ -123,34 +125,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Students Section */}
-      <section id="siswa" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Siswa Kelas X RPL D
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Calon developer handal masa depan Indonesia
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {students.map((student) => (
-              <StudentCard
-                key={student.noAbsen}
-                name={student.name}
-                kelas={student.kelas}
-                noAbsen={student.noAbsen}
-                motivasi={student.motivasi}
-                image={student.image}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Gallery Section */}
-      <section id="galeri" className="py-20 px-4 bg-accent/30">
+      <section id="galeri" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
