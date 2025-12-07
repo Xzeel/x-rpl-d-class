@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Menu, X, Info, User, Image } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import logoImg from '@/assets/logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -16,42 +17,46 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { href: '#about', label: 'About', icon: Info },
+    { href: '#teacher', label: 'Teacher', icon: User },
+    { href: '#gallery', label: 'Gallery', icon: Image },
+  ];
+
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 py-4 px-4">
       <div
-        className={`max-w-4xl mx-auto px-6 py-3 rounded-2xl transition-all duration-300 ${
+        className={`max-w-4xl mx-auto px-4 md:px-6 py-3 rounded-2xl transition-all duration-300 ${
           scrolled
             ? 'bg-background/80 backdrop-blur-md shadow-lg border border-border/50'
             : 'bg-background/40 backdrop-blur-sm'
         }`}
       >
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <img src={logoImg} alt="X RPL D Logo" className="w-12 h-12 rounded-lg object-cover" />
+          <div className="flex items-center space-x-2 md:space-x-3">
+            <img src={logoImg} alt="X RPL D Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-lg object-cover" />
             <div>
-              <h1 className="text-lg font-bold text-foreground">X RPL D</h1>
-              <p className="text-xs text-muted-foreground">SMK Negeri 8 Malang</p>
+              <h1 className="text-base md:text-lg font-bold text-foreground">X RPL D</h1>
+              <p className="text-[10px] md:text-xs text-muted-foreground">SMK Negeri 8 Malang</p>
             </div>
           </div>
-          <div className="flex items-center gap-6">
-            <a
-              href="#about"
-              className="nav-link text-sm font-medium text-foreground transition-colors relative"
-            >
-              About
-            </a>
-            <a
-              href="#teacher"
-              className="nav-link text-sm font-medium text-foreground transition-colors relative"
-            >
-              Teacher
-            </a>
-            <a
-              href="#gallery"
-              className="nav-link text-sm font-medium text-foreground transition-colors relative"
-            >
-              Gallery
-            </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-link text-sm font-medium text-foreground transition-colors relative flex items-center gap-1.5"
+              >
+                <link.icon className="w-4 h-4" />
+                {link.label}
+              </a>
+            ))}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-300 hover:scale-110"
@@ -64,7 +69,52 @@ const Navbar = () => {
               )}
             </button>
           </div>
+
+          {/* Mobile Navigation */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-300"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? (
+                <Moon className="w-5 h-5 text-foreground" />
+              ) : (
+                <Sun className="w-5 h-5 text-foreground" />
+              )}
+            </button>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-300"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5 text-foreground" />
+              ) : (
+                <Menu className="w-5 h-5 text-foreground" />
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pt-4 border-t border-border/50 animate-fade-in">
+            <div className="flex flex-col gap-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"
+                >
+                  <link.icon className="w-4 h-4" />
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
