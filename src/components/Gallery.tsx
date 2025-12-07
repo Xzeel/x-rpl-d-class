@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import gallery1Img from '@/assets/gallery1.jpg';
 import gallery2Img from '@/assets/gallery2.jpg';
 import gallery3Img from '@/assets/gallery3.jpg';
@@ -12,6 +12,18 @@ import { X } from 'lucide-react';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Lock body scroll when lightbox is open
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
 
   const galleryImages = [
     { src: gallery1Img, alt: 'Fotbar bareng guru PPL Agama Islam' },
@@ -44,14 +56,17 @@ const Gallery = () => {
         ))}
       </div>
 
-      {/* Lightbox */}
+      {/* Lightbox - Fixed overlay that prevents scrolling */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
+          className="fixed inset-0 bg-background/95 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-fade-in overflow-hidden"
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
           onClick={() => setSelectedImage(null)}
+          onTouchMove={(e) => e.preventDefault()}
+          onWheel={(e) => e.preventDefault()}
         >
           <button
-            className="absolute top-4 right-4 p-2 rounded-full bg-card hover:bg-accent transition-colors"
+            className="absolute top-4 right-4 p-2 rounded-full bg-card hover:bg-accent transition-colors z-[101]"
             onClick={() => setSelectedImage(null)}
           >
             <X className="w-6 h-6 text-foreground" />
@@ -59,7 +74,7 @@ const Gallery = () => {
           <img
             src={selectedImage}
             alt="Gallery preview"
-            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+            className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           />
         </div>

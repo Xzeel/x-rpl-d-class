@@ -3,7 +3,6 @@ import TeacherCard from '@/components/TeacherCard';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import AnimatedBackground from '@/components/AnimatedBackground';
-import MusicPlayer from '@/components/MusicPlayer';
 import ShineText from '@/components/ShineText';
 import TypingAnimation from '@/components/TypingAnimation';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -25,7 +24,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background animate-fade-in">
       <AnimatedBackground />
-      <MusicPlayer />
       <Navbar />
 
       {/* Hero Section */}
