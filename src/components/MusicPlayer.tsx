@@ -8,16 +8,26 @@ const MusicPlayer = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 0.8;
-      if (isPlaying) {
+      audio.volume = 0.3;
+      // Attempt autoplay
+      const attemptPlay = () => {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
           playPromise.catch(() => {
-            // Auto-play was prevented, user needs to interact first
+            // Auto-play was prevented, try on first user interaction
+            const handleFirstInteraction = () => {
+              audio.play();
+              setIsPlaying(true);
+              document.removeEventListener('click', handleFirstInteraction);
+              document.removeEventListener('touchstart', handleFirstInteraction);
+            };
+            document.addEventListener('click', handleFirstInteraction);
+            document.addEventListener('touchstart', handleFirstInteraction);
             setIsPlaying(false);
           });
         }
-      }
+      };
+      attemptPlay();
     }
   }, []);
 
