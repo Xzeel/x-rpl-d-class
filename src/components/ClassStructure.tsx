@@ -9,19 +9,19 @@ const ClassStructure = () => {
   const structure: StructureItem[] = [
     {
       title: 'Ketua Kelas',
-      members: ['Ahmad Farhan Edriyanetsuka'],
+      members: ['Gendis Gadis Galuh'],
     },
     {
       title: 'Wakil Ketua',
-      members: ['-'],
+      members: ['Navisya Salfa Saifunisa'],
     },
     {
       title: 'Sekretaris',
-      members: ['1. Tiara Clarisa Putri Auriga', '2. Muhammad Fadhil Sulthan B'],
+      members: ['1. Salma Dinah Herfinza', '2. Ramadhani Hakhimah Zuhria Khoji'],
     },
     {
       title: 'Bendahara',
-      members: ['1. Cantika Alicya Putri Risa I', '2. Afrizal Ardiyansyah'],
+      members: ['1. Nesya Putri Anggraini', '2. Yesica Gianita Wijaya Putri'],
     },
   ];
 
