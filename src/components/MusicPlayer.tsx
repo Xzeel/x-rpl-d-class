@@ -35,7 +35,7 @@ const MusicPlayer = () => {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/Starboy.mp3" loop />
+      <audio ref={audioRef} src="/audio/Mejikuhibiniu.mp3" loop />
       <button
         onClick={toggleMusic}
         className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary hover:bg-primary/30 transition-all duration-300 shadow-lg hover:shadow-primary/25 hover:scale-110"
