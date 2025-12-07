@@ -5,6 +5,9 @@ import gallery3Img from '@/assets/gallery3.jpg';
 import gallery4Img from '@/assets/gallery4.jpg';
 import gallery5Img from '@/assets/gallery5.jpg';
 import gallery6Img from '@/assets/gallery6.jpg';
+import gallery7Img from '@/assets/gallery7.jpg';
+import gallery8Img from '@/assets/gallery8.jpg';
+import gallery9Img from '@/assets/gallery9.png';
 import { X } from 'lucide-react';
 
 const Gallery = () => {
@@ -15,8 +18,11 @@ const Gallery = () => {
     { src: gallery2Img, alt: 'Fotbar hari Guru 2025 bareng pak Danang' },
     { src: gallery3Img, alt: 'Fotbar latihan tampil PPTA 2025' },
     { src: gallery4Img, alt: 'Fotbar bareng guru PPL Informatika' },
-    { src: gallery5Img, alt: 'Fotbar bareng guru PPL DPGIM' },
-    { src: gallery6Img, alt: 'Fotbar bareng guru PPL DPGIM' },
+    { src: gallery5Img, alt: 'Fotbar bareng guru PPL DPGIM (All)' },
+    { src: gallery6Img, alt: 'Fotbar bareng guru PPL DPGIM (Mirror)' },
+    { src: gallery7Img, alt: 'Fotbar bareng guru PPL DPGIM (Girls Only 1)' },
+    { src: gallery8Img, alt: 'Fotbar bareng guru PPL DPGIM (Girls Only 2)' },
+    { src: gallery9Img, alt: 'Fotbar Peak Day Kokulikuler 2025' },
   ];
 
   return (
