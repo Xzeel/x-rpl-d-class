@@ -8,7 +8,7 @@ interface Card3DProps {
 
 const Card3D = ({ children, className = '', floating = false }: Card3DProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [transform, setTransform] = useState('');
+  const [tiltTransform, setTiltTransform] = useState('rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
   const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -23,7 +23,7 @@ const Card3D = ({ children, className = '', floating = false }: Card3DProps) => 
     const rotateX = (y - centerY) / 10;
     const rotateY = (centerX - x) / 10;
 
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+    setTiltTransform(`rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
     setGlare({
       x: (x / rect.width) * 100,
       y: (y / rect.height) * 100,
@@ -32,25 +32,27 @@ const Card3D = ({ children, className = '', floating = false }: Card3DProps) => 
   };
 
   const handleMouseLeave = () => {
-    setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
+    setTiltTransform('rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
     setGlare({ x: 50, y: 50, opacity: 0 });
   };
 
   return (
-    <div
-      ref={cardRef}
-      className={`relative transition-transform duration-200 ease-out ${floating ? 'animate-card-float' : ''} ${className}`}
-      style={{ transform: transform || undefined, transformStyle: 'preserve-3d' }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      {children}
+    <div className={`${floating ? 'animate-card-float' : ''}`} style={{ perspective: '1000px' }}>
       <div
-        className="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-200"
-        style={{
-          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, hsl(var(--primary) / ${glare.opacity}), transparent 50%)`,
-        }}
-      />
+        ref={cardRef}
+        className={`relative transition-transform duration-200 ease-out ${className}`}
+        style={{ transform: tiltTransform, transformStyle: 'preserve-3d' }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        {children}
+        <div
+          className="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-200"
+          style={{
+            background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, hsl(var(--primary) / ${glare.opacity}), transparent 50%)`,
+          }}
+        />
+      </div>
     </div>
   );
 };
