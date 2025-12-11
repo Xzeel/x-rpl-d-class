@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import BubbleParticles from '@/components/BubbleParticles';
+import Card3D from '@/components/Card3D';
 import ShineText from '@/components/ShineText';
 import TypingAnimation from '@/components/TypingAnimation';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -88,30 +89,32 @@ const Index = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
-                <div className="relative bg-card rounded-3xl p-8 shadow-xl">
-                  <h4 className="text-xl font-bold text-card-foreground mb-4">Visi Kami</h4>
-                  <p className="text-muted-foreground mb-6">
-                    Jadi kelas yang standout di dunia tech, ngelahirin anak-anak yang jago, kreatif, dan punya integritas tanpa drama.
-                  </p>
-                  <h4 className="text-xl font-bold text-card-foreground mb-4">Misi Kami</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 rounded-full bg-primary mt-2" />
-                      Ngulik dan nguasain teknologi pemrograman yang kekinian
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 rounded-full bg-primary mt-2" />
-                      Bikin proyek-proyek yang fresh, inovatif, dan worth to flex
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 rounded-full bg-primary mt-2" />
-                      Kolaborasi bareng, saling sharing biar semua naik level bareng
-                    </li>
-                  </ul>
+              <Card3D>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
+                  <div className="relative bg-card rounded-3xl p-8 shadow-xl card-glow">
+                    <h4 className="text-xl font-bold text-card-foreground mb-4">Visi Kami</h4>
+                    <p className="text-muted-foreground mb-6">
+                      Jadi kelas yang standout di dunia tech, ngelahirin anak-anak yang jago, kreatif, dan punya integritas tanpa drama.
+                    </p>
+                    <h4 className="text-xl font-bold text-card-foreground mb-4">Misi Kami</h4>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="w-2 h-2 rounded-full bg-primary mt-2" />
+                        Ngulik dan nguasain teknologi pemrograman yang kekinian
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="w-2 h-2 rounded-full bg-primary mt-2" />
+                        Bikin proyek-proyek yang fresh, inovatif, dan worth to flex
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="w-2 h-2 rounded-full bg-primary mt-2" />
+                        Kolaborasi bareng, saling sharing biar semua naik level bareng
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </Card3D>
             </ScrollReveal>
           </div>
         </div>
