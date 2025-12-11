@@ -160,6 +160,11 @@ All colors MUST be HSL.
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
   }
+
+  ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
 }
 
 @layer utilities {

@@ -13,17 +13,6 @@ import { X } from 'lucide-react';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Lock body scroll when lightbox is open
-  useEffect(() => {
-    if (selectedImage) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [selectedImage]);
 
   const galleryImages = [
     { src: gallery1Img, alt: 'Fotbar bareng guru PPL Agama Islam' },
@@ -59,11 +48,8 @@ const Gallery = () => {
       {/* Lightbox - Fixed overlay that prevents scrolling */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-background/95 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-fade-in overflow-hidden"
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+          className="fixed inset-0 bg-background/95 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-fade-in"
           onClick={() => setSelectedImage(null)}
-          onTouchMove={(e) => e.preventDefault()}
-          onWheel={(e) => e.preventDefault()}
         >
           <button
             className="absolute top-4 right-4 p-2 rounded-full bg-card hover:bg-accent transition-colors z-[101]"
