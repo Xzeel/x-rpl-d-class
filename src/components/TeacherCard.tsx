@@ -9,7 +9,7 @@ const TeacherCard = ({ name, jabatan, motivasi, image }: TeacherCardProps) => {
   return (
     <div className="group relative max-w-md mx-auto">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/50 to-secondary rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
-      <div className="relative bg-card rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300">
+      <div className="relative bg-card rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 card-glow">
         <div className="aspect-square overflow-hidden bg-muted">
           <img
             src={image}

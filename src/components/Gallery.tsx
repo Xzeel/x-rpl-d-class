@@ -32,7 +32,7 @@ const Gallery = () => {
         {galleryImages.map((image, index) => (
           <div
             key={index}
-            className="group relative overflow-hidden rounded-lg cursor-pointer aspect-video"
+            className="group relative overflow-hidden rounded-lg cursor-pointer aspect-video card-glow"
             onClick={() => setSelectedImage(image.src)}
           >
             <img
