@@ -3,7 +3,6 @@ import TeacherCard from '@/components/TeacherCard';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import AnimatedBackground from '@/components/AnimatedBackground';
-import BubbleParticles from '@/components/BubbleParticles';
 import Card3D from '@/components/Card3D';
 import ShineText from '@/components/ShineText';
 import TypingAnimation from '@/components/TypingAnimation';
@@ -26,7 +25,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background animate-fade-in">
       <AnimatedBackground />
-      <BubbleParticles />
       <Navbar />
 
       {/* Hero Section */}
@@ -89,7 +87,7 @@ const Index = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <Card3D>
+              <Card3D floating>
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
                   <div className="relative bg-card rounded-3xl p-8 shadow-xl card-glow">

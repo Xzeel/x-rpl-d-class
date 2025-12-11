@@ -262,21 +262,16 @@ All colors MUST be HSL.
     }
   }
 
-  .animate-bubble {
-    animation: bubble-rise linear infinite;
+  .animate-card-float {
+    animation: card-float 4s ease-in-out infinite;
   }
 
-  @keyframes bubble-rise {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.6;
+  @keyframes card-float {
+    0%, 100% {
+      transform: translateY(0);
     }
     50% {
-      opacity: 0.8;
-    }
-    100% {
-      transform: translateY(-100vh) scale(0.5);
-      opacity: 0;
+      transform: translateY(-10px);
     }
   }
 

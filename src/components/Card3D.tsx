@@ -3,9 +3,10 @@ import { useRef, useState, ReactNode } from 'react';
 interface Card3DProps {
   children: ReactNode;
   className?: string;
+  floating?: boolean;
 }
 
-const Card3D = ({ children, className = '' }: Card3DProps) => {
+const Card3D = ({ children, className = '', floating = false }: Card3DProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [transform, setTransform] = useState('');
   const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
@@ -38,8 +39,8 @@ const Card3D = ({ children, className = '' }: Card3DProps) => {
   return (
     <div
       ref={cardRef}
-      className={`relative transition-transform duration-200 ease-out ${className}`}
-      style={{ transform, transformStyle: 'preserve-3d' }}
+      className={`relative transition-transform duration-200 ease-out ${floating ? 'animate-card-float' : ''} ${className}`}
+      style={{ transform: transform || undefined, transformStyle: 'preserve-3d' }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
