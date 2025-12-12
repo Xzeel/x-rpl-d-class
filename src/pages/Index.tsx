@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import TeacherCard from '@/components/TeacherCard';
+import StudentCard from '@/components/StudentCard';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import AnimatedBackground from '@/components/AnimatedBackground';
@@ -21,6 +22,43 @@ const Index = () => {
       'Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia',
     image: teacherImg,
   };
+
+  const students = [
+    { name: 'Siswa 1', kelas: 'X RPL D', noAbsen: 1, image: '/placeholder.svg' },
+    { name: 'Siswa 2', kelas: 'X RPL D', noAbsen: 2, image: '/placeholder.svg' },
+    { name: 'Siswa 3', kelas: 'X RPL D', noAbsen: 3, image: '/placeholder.svg' },
+    { name: 'Siswa 4', kelas: 'X RPL D', noAbsen: 4, image: '/placeholder.svg' },
+    { name: 'Siswa 5', kelas: 'X RPL D', noAbsen: 5, image: '/placeholder.svg' },
+    { name: 'Siswa 6', kelas: 'X RPL D', noAbsen: 6, image: '/placeholder.svg' },
+    { name: 'Siswa 7', kelas: 'X RPL D', noAbsen: 7, image: '/placeholder.svg' },
+    { name: 'Siswa 8', kelas: 'X RPL D', noAbsen: 8, image: '/placeholder.svg' },
+    { name: 'Siswa 9', kelas: 'X RPL D', noAbsen: 9, image: '/placeholder.svg' },
+    { name: 'Siswa 10', kelas: 'X RPL D', noAbsen: 10, image: '/placeholder.svg' },
+    { name: 'Siswa 11', kelas: 'X RPL D', noAbsen: 11, image: '/placeholder.svg' },
+    { name: 'Siswa 12', kelas: 'X RPL D', noAbsen: 12, image: '/placeholder.svg' },
+    { name: 'Siswa 13', kelas: 'X RPL D', noAbsen: 13, image: '/placeholder.svg' },
+    { name: 'Siswa 14', kelas: 'X RPL D', noAbsen: 14, image: '/placeholder.svg' },
+    { name: 'Siswa 15', kelas: 'X RPL D', noAbsen: 15, image: '/placeholder.svg' },
+    { name: 'Siswa 16', kelas: 'X RPL D', noAbsen: 16, image: '/placeholder.svg' },
+    { name: 'Siswa 17', kelas: 'X RPL D', noAbsen: 17, image: '/placeholder.svg' },
+    { name: 'Siswa 18', kelas: 'X RPL D', noAbsen: 18, image: '/placeholder.svg' },
+    { name: 'Siswa 19', kelas: 'X RPL D', noAbsen: 19, image: '/placeholder.svg' },
+    { name: 'Siswa 20', kelas: 'X RPL D', noAbsen: 20, image: '/placeholder.svg' },
+    { name: 'Siswa 21', kelas: 'X RPL D', noAbsen: 21, image: '/placeholder.svg' },
+    { name: 'Siswa 22', kelas: 'X RPL D', noAbsen: 22, image: '/placeholder.svg' },
+    { name: 'Siswa 23', kelas: 'X RPL D', noAbsen: 23, image: '/placeholder.svg' },
+    { name: 'Siswa 24', kelas: 'X RPL D', noAbsen: 24, image: '/placeholder.svg' },
+    { name: 'Siswa 25', kelas: 'X RPL D', noAbsen: 25, image: '/placeholder.svg' },
+    { name: 'Siswa 26', kelas: 'X RPL D', noAbsen: 26, image: '/placeholder.svg' },
+    { name: 'Siswa 27', kelas: 'X RPL D', noAbsen: 27, image: '/placeholder.svg' },
+    { name: 'Siswa 28', kelas: 'X RPL D', noAbsen: 28, image: '/placeholder.svg' },
+    { name: 'Siswa 29', kelas: 'X RPL D', noAbsen: 29, image: '/placeholder.svg' },
+    { name: 'Siswa 30', kelas: 'X RPL D', noAbsen: 30, image: '/placeholder.svg' },
+    { name: 'Siswa 31', kelas: 'X RPL D', noAbsen: 31, image: '/placeholder.svg' },
+    { name: 'Siswa 32', kelas: 'X RPL D', noAbsen: 32, image: '/placeholder.svg' },
+    { name: 'Siswa 33', kelas: 'X RPL D', noAbsen: 33, image: '/placeholder.svg' },
+    { name: 'Siswa 34', kelas: 'X RPL D', noAbsen: 34, image: '/placeholder.svg' },
+  ];
 
   return (
     <div className="min-h-screen bg-background animate-fade-in">
@@ -156,6 +194,34 @@ const Index = () => {
             </div>
           </ScrollReveal>
           <ClassStructure />
+        </div>
+      </section>
+
+      {/* Students Section */}
+      <section id="students" className="py-20 px-4 bg-accent/30">
+        <div className="container mx-auto">
+          <ScrollReveal>
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+                Siswa
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                Para siswa keren kelas X RPL D yang siap jadi developer masa depan
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+            {students.map((student, index) => (
+              <ScrollReveal key={student.noAbsen} delay={index * 30}>
+                <StudentCard
+                  name={student.name}
+                  kelas={student.kelas}
+                  noAbsen={student.noAbsen}
+                  image={student.image}
+                />
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

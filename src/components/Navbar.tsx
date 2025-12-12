@@ -58,6 +58,7 @@ const Navbar = () => {
   const navLinks = [
     { href: '#about', label: 'About', icon: Info },
     { href: '#teacher', label: 'Teacher', icon: User },
+    { href: '#students', label: 'Students', icon: User },
     { href: '#gallery', label: 'Gallery', icon: Image },
   ];
 
