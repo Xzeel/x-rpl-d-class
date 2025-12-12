@@ -15,6 +15,11 @@ import abiWaqqashImg from '@/assets/students/abi-waqqash.jpg';
 import miftaImg from '@/assets/students/mifta.jpg';
 import adindaNabilaImg from '@/assets/students/adinda-nabila.jpg';
 import naufalImg from '@/assets/students/naufal.jpg';
+import aisyahSafaImg from '@/assets/students/aisyah-safa.jpg';
+import akbarImg from '@/assets/students/akbar.jpg';
+import anisaAsaputriImg from '@/assets/students/anisa-asaputri.JPG';
+import audyImg from '@/assets/students/audy-valencia.jpg';
+import auliaPutriImg from '@/assets/students/aulia-putri.jpg';
 
 const Index = () => {
   useSmoothScroll();
@@ -32,10 +37,10 @@ const Index = () => {
     { name: 'Achmad Miftakhul Haq', noAbsen: 2, image: miftaImg },
     { name: 'Adinda Nabila P.S', noAbsen: 3, image: adindaNabilaImg },
     { name: 'Ahnaf Naufal Prawira', noAbsen: 4, image: naufalImg },
-    { name: 'Aisyah Safa Azahrah', noAbsen: 5, image: '/placeholder.svg' },
-    { name: 'Akbar Ramadhan Yasid', noAbsen: 6, image: '/placeholder.svg' },
-    { name: 'Anisa Asaputri W.K', noAbsen: 7, image: '/placeholder.svg' },
-    { name: 'Audy Valencia', noAbsen: 8, image: '/placeholder.svg' },
+    { name: 'Aisyah Safa Azahrah', noAbsen: 5, image: aisyahSafaImg },
+    { name: 'Akbar Ramadhan Yasid', noAbsen: 6, image: akbarImg },
+    { name: 'Anisa Asaputri W.K', noAbsen: 7, image: anisaAsaputriImg },
+    { name: 'Audy Valencia', noAbsen: 8, image: audyImg },
     { name: 'Aulia Putri Maharani', noAbsen: 9, image: '/placeholder.svg' },
     { name: 'Bintang Sholikhul Khakim', noAbsen: 10, image: '/placeholder.svg' },
     { name: 'Esya Galih Pratama', noAbsen: 11, image: '/placeholder.svg' },
