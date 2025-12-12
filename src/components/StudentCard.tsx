@@ -16,13 +16,11 @@ const StudentCard = ({ name, noAbsen, image }: StudentCardProps) => {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
-        <div className="p-4 space-y-1">
-          <div className="flex items-center justify-between gap-2">
-            <h3 className="text-sm md:text-base font-bold text-card-foreground line-clamp-1">{name}</h3>
-            <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold shrink-0">
-              #{noAbsen}
-            </span>
-          </div>
+        <div className="p-4 space-y-2">
+          <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+            #{noAbsen}
+          </span>
+          <h3 className="text-sm md:text-base font-bold text-card-foreground">{name}</h3>
         </div>
       </div>
     </div>
