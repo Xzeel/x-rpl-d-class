@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Moon, Sun, Menu, X, Info, User, Image, Volume2, VolumeX } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
-import logoImg from '@/assets/logo.png';
+import logoImg from '@/assets/logo.webp';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
