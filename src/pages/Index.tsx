@@ -10,7 +10,7 @@ import TypingAnimation from '@/components/TypingAnimation';
 import ScrollReveal from '@/components/ScrollReveal';
 import ClassStructure from '@/components/ClassStructure';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
-import teacherImg from '@/assets/teacher.jpg';
+import teacherImg from '@/assets/teacher.webp';
 import abiWaqqashImg from '@/assets/students/abi-waqqash.jpg';
 import miftaImg from '@/assets/students/mifta.jpg';
 import adindaNabilaImg from '@/assets/students/adinda-nabila.jpg';
