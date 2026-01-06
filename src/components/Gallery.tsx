@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import gallery1Img from '@/assets/gallery1.webp';
 import gallery2Img from '@/assets/gallery2.webp';
 import gallery3Img from '@/assets/gallery3.webp';
@@ -20,18 +20,6 @@ import { X } from 'lucide-react';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  // Prevent body scroll when lightbox is open
-  useEffect(() => {
-    if (selectedImage) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [selectedImage]);
 
 
   const galleryImages = [
