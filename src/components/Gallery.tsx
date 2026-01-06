@@ -76,19 +76,19 @@ const Gallery = () => {
       {/* Lightbox - Fixed overlay that prevents scrolling */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-background/95 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-fade-in"
+          className="fixed top-0 left-0 w-screen h-screen bg-background/95 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 animate-fade-in"
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 p-2 rounded-full bg-card hover:bg-accent transition-colors z-[101]"
+            className="absolute top-6 right-6 p-3 rounded-full bg-card hover:bg-accent transition-colors z-[10000]"
             onClick={() => setSelectedImage(null)}
           >
-            <X className="w-6 h-6 text-foreground" />
+            <X className="w-8 h-8 text-foreground" />
           </button>
           <img
             src={selectedImage}
             alt="Gallery preview"
-            className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            className="max-w-[95vw] max-h-[95vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
