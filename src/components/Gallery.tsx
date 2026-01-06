@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import gallery1Img from '@/assets/gallery1.webp';
 import gallery2Img from '@/assets/gallery2.webp';
 import gallery3Img from '@/assets/gallery3.webp';
@@ -16,12 +15,8 @@ import gallery14Img from '@/assets/gallery14.webp';
 import gallery15Img from '@/assets/gallery15.webp';
 import gallery16Img from '@/assets/gallery16.webp';
 import gallery17Img from '@/assets/gallery17.webp';
-import { X } from 'lucide-react';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-
   const galleryImages = [
     { src: gallery1Img, alt: 'Fotbar bareng guru PPL Agama Islam' },
     { src: gallery2Img, alt: 'Fotbar hari Guru 2025 bareng pak Danang' },
@@ -43,45 +38,21 @@ const Gallery = () => {
   ];
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {galleryImages.map((image, index) => (
-          <div
-            key={index}
-            className="group relative overflow-hidden rounded-lg cursor-pointer aspect-video card-glow"
-            onClick={() => setSelectedImage(image.src)}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300" />
-          </div>
-        ))}
-      </div>
-
-      {/* Lightbox - Fixed overlay that prevents scrolling */}
-      {selectedImage && (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {galleryImages.map((image, index) => (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-background/95 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 animate-fade-in"
-          onClick={() => setSelectedImage(null)}
+          key={index}
+          className="group relative overflow-hidden rounded-lg aspect-video card-glow"
         >
-          <button
-            className="absolute top-6 right-6 p-3 rounded-full bg-card hover:bg-accent transition-colors z-[10000]"
-            onClick={() => setSelectedImage(null)}
-          >
-            <X className="w-8 h-8 text-foreground" />
-          </button>
           <img
-            src={selectedImage}
-            alt="Gallery preview"
-            className="max-w-[95vw] max-h-[95vh] object-contain rounded-lg shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
+          <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300" />
         </div>
-      )}
-    </>
+      ))}
+    </div>
   );
 };
 
