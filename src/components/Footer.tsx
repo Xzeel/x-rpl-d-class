@@ -49,13 +49,16 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-1">
             <p className="text-xs md:text-sm text-secondary-foreground/80">
               © 2025 - {currentYear}{' '}
               <a target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary transition-colors underline decoration-primary/50 hover:decoration-primary" href="https://xzeelarcadia.carrd.co/">
                 XzeelArcadia
               </a>
               . All Rights Reserved.
+            </p>
+            <p className="text-[10px] md:text-xs text-secondary-foreground/60">
+              Dibuat dengan 💖 oleh XzeelArcadia
             </p>
           </div>
         </div>
