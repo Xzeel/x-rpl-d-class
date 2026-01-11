@@ -119,7 +119,7 @@ const Navbar = () => {
               )}
             </button>
           </div>
-          <audio ref={audioRef} src="/audio/WhereWeAre.mp3" loop />
+          <audio ref={audioRef} src="/audio/LadyKillersII.mp3" loop />
 
           {/* Mobile Navigation */}
           <div className="flex md:hidden items-center gap-2">
