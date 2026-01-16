@@ -4,7 +4,7 @@
   <img src="public/XRPLDRISE.png" alt="X RPL D Logo" />
 </p>
 
-A class structure built with Vite.js. Cool modern animated UI.
+<h3 align="center">A class structure built with Vite.js. Cool modern animated UI.</h3>
 
 ## Features
 
