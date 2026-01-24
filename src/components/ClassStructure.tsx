@@ -21,7 +21,7 @@ const ClassStructure = () => {
     },
     {
       title: 'Bendahara',
-      members: ['1. Nesya Putri Anggraini', '2. Yesica Gianita Wijaya Putri'],
+      members: ['1. Nesya Putri Anggraini', '2. Satria Moreno Prasetya'],
     },
     {
       title: 'Kebersihan',
