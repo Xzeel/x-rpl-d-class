@@ -24,15 +24,15 @@ const CustomCursor = () => {
     const handleMouseEnter = () => setCursorVariant('text');
     const handleMouseLeave = () => setCursorVariant('default');
 
-    const interactiveElements = document.querySelectorAll('a, button, [role="button"], input, textarea, select, [data-cursor-hover]');
+    const allElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, button, img, svg, [role="button"], input, textarea, select, [data-cursor-hover], li, label, div');
     
-    interactiveElements.forEach((el) => {
+    allElements.forEach((el) => {
       el.addEventListener('mouseenter', handleMouseEnter);
       el.addEventListener('mouseleave', handleMouseLeave);
     });
 
     return () => {
-      interactiveElements.forEach((el) => {
+      allElements.forEach((el) => {
         el.removeEventListener('mouseenter', handleMouseEnter);
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
