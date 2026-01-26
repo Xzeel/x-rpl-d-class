@@ -24,4 +24,8 @@
 
 ## License
 
-MIT. See `LICENSE`.
+```
+© 2026 XzeelArcadia.
+© 2025-2026 X RPL D. All Rights Reserved.
+© 2025-2026 Lumistra Unity. All Rights Reserved.
+```
